@@ -51,7 +51,7 @@ app.use((req, res, next) => {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
         "Access-Control-Allow-Methods": "GET, POST, PATCH, DELETE, OPTIONS",
-        "Content-Security-Policy": "default-src *",
+        "Content-Security-Policy": "script-src-elem https://www.google-analytics.com/analytics.js",
         "X-Content-Security-Policy": "default-src *",
         "X-WebKit-CSP": "default-src *"
     })
