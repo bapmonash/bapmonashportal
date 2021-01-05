@@ -12,10 +12,12 @@ const app = express()
 //paths 
 const publicDirectoryPath = path.join(__dirname,'../public')  
 const bootstrapPath = path.join(__dirname,'../node_modules/bootstrap/dist')  
+const faviconPath = path.join(__dirname,'../public/assets/favicon')
 
 //set up static directory 
 app.use(express.static(publicDirectoryPath))
 app.use('/dist',express.static(bootstrapPath))
+app.use('/favicon',express.static(faviconPath))
 
 //handlebars
 const viewsPath = path.join(__dirname,'../templates/views')
