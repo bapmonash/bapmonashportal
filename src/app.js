@@ -46,18 +46,6 @@ app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.resolve(faviconPath, '/favicon.ico'));
   });
 
-app.use((req, res, next) => {
-    res.set({
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        "Access-Control-Allow-Methods": "GET, POST, PATCH, DELETE, OPTIONS",
-        "Content-Security-Policy": "script-src-elem 'self' https://www.google-analytics.com/analytics.js",
-        "X-Content-Security-Policy": "default-src *",
-        "X-WebKit-CSP": "default-src *"
-    })
-    next();
-});
-
 //home
 app.get('', (req,res)=>{
     
