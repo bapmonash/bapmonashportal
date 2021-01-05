@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/avicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>{{siteTitle}} | {{title}}</title>
+</head>
+<body>
+    {{>header}}
+    <main>
+        <h1>{{title}}</h1>
+
+        
+        <button type="button" id="call-to-action" class="btn btn-dark" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
+        <br></br>
+        <form id="location-form">
+            <div class="input-group mb-3">
+                <input value="" class="form-control" placeholder="Enter student id to find hours...">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>
+        </form>
+
+      
+
+        <div id="output"></div>
+
+    
+        
+    </main>
+    {{>footer}}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+    <script src="/dist/js/bootstrap.js"></script>
+    <script src="/js/hours-client.js"></script>
+</body>
+</html>

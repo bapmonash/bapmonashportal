@@ -1,0 +1,190 @@
+main{
+    padding:4% 6% 10% 6%;
+    
+}
+
+
+html, main, body{
+    font-family:Avenir;
+}
+
+
+body{
+    background-color: #f1dfd1;
+    background-image: linear-gradient(120deg, #fff 0%, #f8efd7 64%);
+
+}
+
+
+/* Buttons */
+.btn-red {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
+.btn-red {
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+
+   display: block;
+ }
+ .btn-red:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+/* footer */
+.footer .container {
+    background-color: #6d0000;
+    padding-top:10;
+    padding-bottom:0;
+}
+.footer {
+    background-color: #6d0000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Index */
+
+
+
+.call-to-action-buttons-span{
+    margin: auto;
+    width: 240!important;
+}
+
+#hero-container{
+    height: 70%;
+    display: flex;
+	align-items: center;
+	flex-direction: column;
+    justify-content:center;
+}
+.hero{
+	background-color: white;
+	margin-top:10px;
+    text-align: center;
+    width:100%;
+    
+}
+/* Hours */
+.panel-group .list-group {
+	margin-bottom: 0;
+}
+
+.panel-group .list-group .list-group-item {
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group .list-group .list-group-item:last-child {
+	border-bottom: none;
+}
+
+
+/* Preloader */
+
+
+.squares-preloader {
+	
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	animation: scale ease 1.4s infinite;
+}
+
+.squares-preloader::before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #BD2336;
+	top: -10px;
+	left: -10px;
+	animation: top ease 3s infinite;
+}
+
+.squares-preloader::after {
+	content: '';
+	position: absolute;
+    width: 15px;
+	height: 15px;
+	background: #BD2336;
+	bottom: -10px;
+	right: -10px;
+	animation: bottom ease 3s infinite;
+}
+
+
+
+@keyframes top{
+	0%{
+		top: -10px;
+	}
+	20%{
+		top: 100%;
+		left: -10px;
+	}
+	40%{
+		left: 100%;
+		top: 100%;
+		transform: rotate(180deg);
+	}
+	60%{
+		top: -10px;
+		left: 100%;
+	}
+	80%{
+		top: -10px;
+		transform: rotate(360deg);
+	}
+	100%{
+		left: -10px;
+	}
+}
+
+@keyframes bottom{
+	0%{
+		bottom: -10px;
+	}
+	20%{
+		bottom: 100%;
+		right: -10px;
+	}
+	40%{
+		right: 100%;
+		bottom: 100%;
+		transform: rotate(180deg);
+	}
+	60%{
+		bottom: -10px;
+		right: 100%;
+	}
+	80%{
+		bottom: -10px;
+		transform: rotate(360deg);
+	}
+	100%{
+		right: -10px;
+	}
+}
+
+@keyframes scale{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(0.7);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

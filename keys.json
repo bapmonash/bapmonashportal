@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bapmonash-300806",
+  "private_key_id": "ef620d43a7dd2b704ca92babc5458675d236bfd6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDj0Bv3It8QpAgI\nl5AJpkzLyPBUpa/uUCvpnO7dM57Ni0u81qytopMxtyvyoSMdReU6p/1NleHc0h1k\nYGw7kGoPHZZIeHxAVPJuTh/UGIsIwqb+Nh6+SdMKuEcxI2954gr4v1ACAMrKLMl3\nDCfdWNjoMibX+rEq4ZZvrIHmCkeKV2kZcyZlOY8IyNL+rxrVbEhv4/hPO2vF2HGT\nwbgD8PTqd+XnIuHyqEske+Y8ZNIBIIpLaguifCu/7iBhICJ36o5kUTcHFYqhZ3Jl\nlsZ0uVECY2Hmvvq2QBnqjn8ym6E9YDo0c2vScMqre1RTax3Mp6lqrmBj9Nyeeh7p\nK8mu+thhAgMBAAECggEAOQy4tB8LdYNeb6hk7cWznaToaopDkI6LMKmYN9Thg9/K\nS7QG8kSwT9brLouj24TRbur6yB8svLvxmF19PT1hEf/6zpM9qm6bd3whBGBRERSN\n9UNgV47tRtX3Hhsdo4wz6y8dviKspgypNyLYKNpDF4LXr2acT3zGy5iLvyv71mys\nVw8us+Ic2C/lK8OQA7d0SAR++GogGXdy8s65keO7zDEObaSbuEeI261qftDXDiop\n8oSAdjv9jySdLxdXUyOlpTpbUd8uKdKi03zdY3rcjAitz2VDOi85FkwPsDUDf7UU\nSS6quOv9uJTPZ93OvVI5u8OW6W94faM3Mupl8szQMQKBgQD8VnKqt7rNRYxzHdZy\nyxHTqqVMUFWpmmj9M/6Ln25HsNXo/e7waKbt9TEZcwv3LnN0Sm1o5Fvk0RYEVClg\nf8KzkgUSGZ0qvOneK5eBi0MDTV2xKGVya5EDp1GMjQYbLeVG/a0ZdrVFtJ1SWf8s\n210ICsVUnvC4lbKCAvtUgyApowKBgQDnHopYULQXhITavHWkPuWX5/xdDcrb4dF3\n1TkXS0h/7b/FZrDla8GUijnrev3LLYB5Eur+iwTTxLHbemTIK4V+txgJiIqHzwPG\n61LszqEK5qsRA+7Mfw5ffR8Hy0I7rSOpbgJYerMeEZgwklQw6Mp9N8VQssKZASwd\nlV1uCi5eKwKBgQDtgpkPozwKtmnKeM0+43D2IGrR99OJfjNQEL6IwRnWFNZjJZDf\nbEGjPORoJeefU3OMg/mTf04Xg84LaQRBNkAXMVvge4d5kLM4USOb5W7ADvQfKfzC\nxAiMvdJ+TsbukjZ6qY9ipl9dKvHhb6BFonxgc3LlgWzm8NBCm3fhRkLhrQKBgFuZ\nOQ9jfNzNQrJGewGLhAc+hECFFN8sko5BzYyz45oAKj8cQgPLPz+VwPrZFfkOoZpa\nqxQTGOitTihES+khhpkAC+DLYswMedy+q3D7O8xMO4RU4LHfsVybBE9ceXWZW0bt\nOLTEfHTwWDb357IysP4LuoIPNxzY4Bkhd5QDKPldAoGBAMqY+R8RN5GcHrQqf5V5\nUH6bLueKfnwlUTi78HBfmfMX8ffw0TF0LyuJOQXTPs9suKUDMSJQU+UD4S/sExfI\n5yyP0HBZMee6H1VQA1rsJq/1vxjPke/uGK+bOAgvTn+yXIqxLdKGyjTlSFDEPtl8\nAtMqMZXbh0v1VaopbP25MdXB\n-----END PRIVATE KEY-----\n",
+  "client_email": "developer@bapmonash-300806.iam.gserviceaccount.com",
+  "client_id": "114635997800835898463",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/developer%40bapmonash-300806.iam.gserviceaccount.com"
+}
