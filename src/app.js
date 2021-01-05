@@ -12,7 +12,7 @@ const app = express()
 //paths 
 const publicDirectoryPath = path.join(__dirname,'../public')  
 const bootstrapPath = path.join(__dirname,'../node_modules/bootstrap/dist')  
-const faviconPath = path.join(__dirname,'../public/assets/favicon/')
+const faviconPath = path.join(__dirname,'../public/assets/favicon')
 
 //set up static directory 
 app.use(express.static(publicDirectoryPath))
@@ -43,7 +43,7 @@ const siteTitle = 'Xi Epsilon Portal'
 
 app.get('/favicon.ico', (req, res) => {
     // Use actual relative path to your .ico file here
-    res.sendFile(path.resolve(faviconPath, 'favicon.ico'));
+    res.sendFile(path.resolve(faviconPath, '/favicon.ico'));
   });
 
 
