@@ -13,23 +13,21 @@
     {{>header}}
     <main>
          <div id="hero-container">
-             <div class="hero">
+             <div class="cards">
 
                  <div class="card-header">
-                        <h5>Welcome</h5>
                     </div>
                     <div class="card-body">
 
-                        <h5 class="card-title">A little about this site
+                        <h5 class="card-title">Xi Epsilon Portal
                         </h5>
-                        <p class="card-text">enjoy the things </p>
                         <div class="call-to-action-buttons-span">
                             <button type="button" class="btn btn-red btn-block" onclick="location.href='/hours'">Check Hours</button>
                             <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
                         </div>
                     </div>
              </div>
-             <div class="hero">
+             <div class="cards">
                 <div class="card text-center">
                     <div class="card-header">
                         <h5>Upcoming Event</h5>
@@ -37,10 +35,8 @@
                     <div class="card-body">
                         {{!-- add DOM here --}}
                         <div id="upcoming-event"></div>
-                        <h5 class="card-title">Special title treatment
-                        </h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
                         <div class="call-to-action-buttons-span">
                          <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='https://google.com'">Register Here</button>
                         </div>
@@ -54,6 +50,7 @@
     {{>footer}}
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
     <script src="/dist/js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
     <script src="/js/index-client.js"></script>
 </body>
 </html>

@@ -86,13 +86,13 @@ app.get('/events', (req,res)=>{
     
     }else if(req.query.event=='upcoming'){
         getEventDetails(req.query.event,(error, {
-            eventNo,name,place,about,image,link
+            eventNo,date,name,place,about,image,link
         }={})=>{
             if(error){
                 return res.send(error)
             }else{
                 return res.send({
-                    eventNo,name,place,about,image,link
+                    eventNo,date,name,place,about,image,link
                 })
             }
         })

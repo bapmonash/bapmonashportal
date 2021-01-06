@@ -64,9 +64,9 @@ body{
 	flex-direction: column;
     justify-content:center;
 }
-.hero{
+.cards{
 	background-color: white;
-	margin-top:10px;
+	margin-top:5vh;
     text-align: center;
     width:100%;
     

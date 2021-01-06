@@ -55,7 +55,7 @@ async function getEvent(events){
         
         difference = eventDate.diff(now,'days')+1
 
-        console.log(`now: ${now} event date: ${eventDate} ${event.name} | ${difference} days`)
+        // console.log(`now: ${now} event date: ${eventDate} ${event.name} | ${difference} days`)
         
         if (difference<retValDifference && difference>0){
             retValDifference=difference
@@ -92,9 +92,10 @@ const getUpcoming = (callback)=>{
                     callback('no event found', undefined)
                 }else{
                     
-                    const {eventNo, name,place,about,image,link} = event
+                    const {eventNo, date,name,place,about,image,link} = event
                     callback(undefined, { 
-                        eventNo, 
+                        eventNo,
+                        date, 
                         name,
                         place,
                         about,
