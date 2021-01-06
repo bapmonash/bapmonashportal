@@ -5,7 +5,6 @@ const makePreloader = () =>{
     upcoming_panel.textContent=''
     const loader = document.createElement('div')
     loader.setAttribute('class','squares-preloader')
-    loader.setAttribute('style','margin-top:20vh;margin-bottom:20vh;')
     upcoming_panel.appendChild(loader)
 }
 
@@ -20,7 +19,7 @@ const loadEvent = () =>{
             throw new Error('No events found')
         }
     }).then((data)=>{
-        console.log(data)
+       
         upcoming_panel.textContent=''
         const text = document.createElement('p')
         text.textContent = data.name

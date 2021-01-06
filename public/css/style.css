@@ -1,5 +1,6 @@
 main{
-    padding:4% 6% 10% 6%;
+	padding:4% 6% 10% 6%;
+	height:100%;
     
 }
 
@@ -37,12 +38,12 @@ body{
 /* footer */
 .footer .container {
     background-color: #6d0000;
-    padding-top:10;
-    padding-bottom:0;
+    padding-top:15;
+    padding-bottom:15;
 }
 .footer {
     background-color: #6d0000;
-    position: fixed;
+	height:15vh;
     bottom: 0;
     width: 100%;
 }
@@ -57,7 +58,7 @@ body{
 }
 
 #hero-container{
-    height: 70%;
+    height: auto;
     display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -90,7 +91,8 @@ body{
 
 
 .squares-preloader {
-	
+	margin-top:5vh;
+	margin-bottom:15vh;
 	left: 0;
 	right: 0;
 	top: 0;
