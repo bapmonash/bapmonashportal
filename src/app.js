@@ -70,7 +70,7 @@ app.get('', (req,res)=>{
 app.get('/events', (req,res)=>{
 
     if(!req.query.event){
-        res.render('Events',{
+        res.render('events',{
             siteTitle:siteTitle,
             title:'Events',
             dateYear
@@ -102,7 +102,7 @@ app.get('/events', (req,res)=>{
 //hours
 app.get('/hours', (req,res)=>{
     if(!req.query.studentId){
-        res.render('Hours',{
+        res.render('hours',{
             siteTitle:siteTitle,
             title:'Hours',
             buttonName:button_one,
