@@ -1,6 +1,6 @@
 main{
-	padding:4% 6% 10% 6%;
-	height:100%;
+	padding:50px 5%  25px 5% ;
+	height:auto;
     
 }
 
@@ -12,7 +12,7 @@ html, main, body{
 
 body{
     background-color: #f1dfd1;
-    background-image: linear-gradient(120deg, #fff 0%, #f8efd7 64%);
+    background-image: linear-gradient(120deg, #fff 0%, rgb(240, 239, 239) 50%);
 
 }
 
@@ -43,9 +43,80 @@ body{
 }
 .footer {
     background-color: #6d0000;
-	height:15vh;
-    bottom: 0;
     width: 100%;
+}
+
+
+/* hamburger */
+
+#header-red{
+	width: 100%;
+	background-color: #6d0000 !important;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  background: transparent !important;
+}
+
+.navbar-toggler .icon-bar {
+  background-color: #fff;
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggler .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+
+.icon-bar:nth-child(2) {
+  width: 16px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:hover>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:active>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+  transition: ease all .2s;
+}
+
+.sec-accent {
+  background-color: #fafcf5;
+}
+
+.blue {
+  background-color: #9999cc;
 }
 
 /* Index */
@@ -58,18 +129,25 @@ body{
 }
 
 #hero-container{
-    height: auto;
-    display: flex;
-	align-items: center;
-	flex-direction: column;
-    justify-content:center;
+    
 }
+
+/* Cards */
 .cards{
-	background-color: white;
+
 	margin-top:5vh;
     text-align: center;
-    width:100%;
+    width:auto;
     
+}
+
+.crop {
+	height: 150px;
+	overflow: hidden;
+}
+
+.crop img {
+	height: 300px;
 }
 /* Hours */
 .panel-group .list-group {
@@ -102,6 +180,8 @@ body{
 	height: 50px;
 	animation: scale ease 1.4s infinite;
 }
+
+
 
 .squares-preloader::before {
 	content: '';

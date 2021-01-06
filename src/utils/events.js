@@ -21,7 +21,7 @@ async function gsrun(client){
 
     const options= {
         spreadsheetId:'1I_QoYyfm-wF2o71sU-kos1b6KZD3tAaUWcCT78mJFO8',
-        range:'Events!A:G'
+        range:'Events!A:I'
     }
     let main = await gsapi.spreadsheets.values.get(options)
     let data = main.data.values
@@ -92,10 +92,12 @@ const getUpcoming = (callback)=>{
                     callback('no event found', undefined)
                 }else{
                     
-                    const {eventNo, date,name,place,about,image,link} = event
+                    const {eventNo, date,time,type,name,place,about,image,link} = event
                     callback(undefined, { 
                         eventNo,
                         date, 
+                        time,
+                        type,
                         name,
                         place,
                         about,

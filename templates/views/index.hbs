@@ -12,40 +12,35 @@
 <body>
     {{>header}}
     <main>
-         <div id="hero-container">
-             <div class="cards">
+         <div >
+            
 
-                 <div class="card-header">
-                    </div>
-                    <div class="card-body">
+                 <div id="hero-container" class="row">
+                 
+                    <div class="cards col-sm-6">
+                        
+                            <div class="card shadow">
+                                <div class="crop">
+                                    <img class="card-img" src="https://source.unsplash.com/1600x900/?succulent,green,dark,table" alt="succulent">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Xi Epsilon Portal </h4>
+                                
+                                
+                                    <button type="button" class="btn btn-red btn-block" onclick="location.href='/hours'">Check Hours</button>
+                                    <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
+                                </div>
+                            </div>
+                        
+                    </div>  
+                 
+                
+                    <div id="upcoming-event"></div>
 
-                        <h5 class="card-title">Xi Epsilon Portal
-                        </h5>
-                        <div class="call-to-action-buttons-span">
-                            <button type="button" class="btn btn-red btn-block" onclick="location.href='/hours'">Check Hours</button>
-                            <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
-                        </div>
-                    </div>
-             </div>
-             <div class="cards">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h5>Upcoming Event</h5>
-                    </div>
-                    <div class="card-body">
-                        {{!-- add DOM here --}}
-                        <div id="upcoming-event"></div>
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                        <div class="call-to-action-buttons-span">
-                         <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='https://google.com'">Register Here</button>
-                        </div>
-                    </div>
-                    {{!-- <div class="card-footer text-muted">
-                    </div> --}}
                 </div>
-            </div>
+          
         </div>
+    
     </main>
     {{>footer}}
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>

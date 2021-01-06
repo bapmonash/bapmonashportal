@@ -20,7 +20,7 @@ async function gsrun(client){
 
     const options= {
         spreadsheetId:'1I_QoYyfm-wF2o71sU-kos1b6KZD3tAaUWcCT78mJFO8',
-        range:'Hours!1:19'
+        range:'Hours!1:100'
     }
     let main = await gsapi.spreadsheets.values.get(options)
     let data = main.data.values

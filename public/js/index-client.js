@@ -1,5 +1,8 @@
 const upcoming_panel = document.querySelector('#upcoming-event')
 
+const hero_container = document.querySelector('#hero-container')
+
+
 const makePreloader = () =>{
     upcoming_panel.textContent=''
     const loader = document.createElement('div')
@@ -20,27 +23,10 @@ const loadEvent = () =>{
     }).then((data)=>{
        
         upcoming_panel.textContent=''
-
-
-        const name = document.createElement('p')
-        name.textContent = data.name
-
-
-        const date = document.createElement('p')
-        const eventDate = moment(data.date, "DD-MM-YYYY")
-        date.textContent = eventDate.format("MMM-DD-YYYY")
-
-        const place = document.createElement('p')
-        place.textContent = data.place
-
-        const about = document.createElement('p')
-        about.textContent = `${data.about.slice(0,60)}...`
-
-
-        upcoming_panel.appendChild(name)
-        upcoming_panel.appendChild(date)
-        upcoming_panel.appendChild(place)
-        upcoming_panel.appendChild(about)
+        console.log(data)
+        hero_container.appendChild(createEvent(data.date,data.time,
+            data.type,data.name,
+            data.place,data.about,data.image,data.link))
        
     }).catch((error)=>{
     
@@ -48,7 +34,92 @@ const loadEvent = () =>{
 
     })
 }
-makePreloader()
-loadEvent()
+
+
+const createEvent = (date,time,type,name,place,about,image,link) => {
+
+    const cards = document.createElement('div')
+    cards.setAttribute('class','cards col-sm-6')
+
+
+    const cardShadow = document.createElement('div')
+    cardShadow.setAttribute('class','card shadow')
+
+    const crop = document.createElement('div')
+    crop.setAttribute('class','crop')
+
+    const cardBody = document.createElement('div')
+    cardBody.setAttribute('class','card-body')
+
+    const UpcomingContainer = document.createElement('h4')
+    UpcomingContainer.setAttribute('class','card-title')
+    UpcomingContainer.textContent = 'Upcoming Event'
+
+
+
+    const nameContainer = document.createElement('h5')
+    nameContainer.setAttribute('class','card-title text-muted')
+    nameContainer.setAttribute('style','text-decoration:underline;')
+    nameContainer.textContent = name
+
+
+    const dateContainer = document.createElement('p')
+    dateContainer.setAttribute('class','card-title text-muted')
+    const eventDate = moment(date, "DD-MM-YYYY")
+    const dateText = eventDate.format("MMM-DD-YYYY")
+    const eventTime = moment(time,"hh:mm A")
+    const timeText = eventTime.format("hh:mm A")
+    dateContainer.textContent = `${dateText} ${timeText}`
+
+    const placeContainer = document.createElement('p')
+    placeContainer.setAttribute('class','card-title text-muted')
+    placeContainer.textContent = place
+
+    const typeContainer = document.createElement('p')
+    typeContainer.setAttribute('class','card-title text-muted')
+    typeContainer.textContent =`${type.toProperCase()} Event`
+
+
+    const aboutContainer = document.createElement('p')
+    aboutContainer.textContent = `${about.slice(0,60)}...`
 
     
+    const imageContainer= document.createElement('img')
+    imageContainer.setAttribute('src',image)
+    imageContainer.setAttribute('height',"200px")
+
+
+    const registerContainer = document.createElement('button')
+    registerContainer.setAttribute('class','btn btn-dark btn-block"')
+    registerContainer.setAttribute('onclick',`location.href="${link}"`)
+    registerContainer.textContent = 'Register Here'
+
+
+    crop.appendChild(imageContainer)
+
+    cardBody.appendChild(UpcomingContainer)
+    cardBody.appendChild(nameContainer)
+    cardBody.appendChild(typeContainer)
+    cardBody.appendChild(dateContainer)
+    cardBody.appendChild(placeContainer)
+    cardBody.appendChild(aboutContainer)
+    cardBody.appendChild(registerContainer)
+        
+
+
+    cardShadow.appendChild(crop)
+    cardShadow.appendChild(cardBody)
+
+
+    cards.appendChild(cardShadow)
+    return cards
+}
+
+
+String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
+
+
+makePreloader()
+loadEvent()
