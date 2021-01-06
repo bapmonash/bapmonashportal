@@ -1,5 +1,7 @@
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -10,9 +12,7 @@
 <body>
     {{>header}}
     <main>
-        
          <div id="hero-container">
-
              <div class="hero">
 
                  <div class="card-header">
@@ -21,47 +21,31 @@
                     <div class="card-body">
 
                         <h5 class="card-title">A little about this site
-
-
                         </h5>
                         <p class="card-text">enjoy the things </p>
                         <div class="call-to-action-buttons-span">
                             <button type="button" class="btn btn-red btn-block" onclick="location.href='/hours'">Check Hours</button>
                             <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
                         </div>
-
                     </div>
-                
              </div>
-
              <div class="hero">
-
-
                 <div class="card text-center">
                     <div class="card-header">
                         <h5>Upcoming Event</h5>
                     </div>
                     <div class="card-body">
-
-
                         {{!-- add DOM here --}}
                         <div id="upcoming-event"></div>
-
                         <h5 class="card-title">Special title treatment
-
-
                         </h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.
-
-
-
                         </p>
                         <div class="call-to-action-buttons-span">
                          <button  type="button" id="call-to-action" class="btn btn-dark btn-block" onclick="location.href='https://google.com'">Register Here</button>
                         </div>
                     </div>
                     {{!-- <div class="card-footer text-muted">
-                       
                     </div> --}}
                 </div>
             </div>
