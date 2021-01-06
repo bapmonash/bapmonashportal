@@ -143,11 +143,13 @@ body{
 
 .crop {
 	height: 150px;
+
 	overflow: hidden;
 }
 
 .crop img {
-	height: 300px;
+	height: auto;
+	width: 100%;
 }
 /* Hours */
 .panel-group .list-group {
