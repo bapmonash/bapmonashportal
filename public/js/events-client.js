@@ -92,6 +92,9 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
 
     
     const imageContainer= document.createElement('img')
+    if(!image){
+        image = '../assets/red.png'
+    }
     imageContainer.setAttribute('src',image)
     imageContainer.setAttribute('height',"200px")
 

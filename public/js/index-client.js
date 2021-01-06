@@ -85,12 +85,16 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
 
     
     const imageContainer= document.createElement('img')
+    if(!image){
+        image = '../assets/red.png'
+    }
     imageContainer.setAttribute('src',image)
     imageContainer.setAttribute('height',"200px")
 
 
     const registerContainer = document.createElement('button')
     registerContainer.setAttribute('class','btn btn-dark btn-block"')
+
     registerContainer.setAttribute('onclick',`location.href="${link}"`)
     registerContainer.textContent = 'Register Here'
 
