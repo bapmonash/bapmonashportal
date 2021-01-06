@@ -17,24 +17,6 @@ body{
 }
 
 
-/* Buttons */
-.btn-red {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
-.btn-red {
-   text-align: center;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-
-   display: block;
- }
- .btn-red:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
-
 /* footer */
 .footer .container {
     background-color: #6d0000;
@@ -122,11 +104,6 @@ body{
 /* Index */
 
 
-
-.call-to-action-buttons-span{
-    margin: auto;
-    width: 240!important;
-}
 
 #hero-container{
     
