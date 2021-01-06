@@ -100,7 +100,7 @@ form.addEventListener('submit',(e)=>{
     loader.setAttribute('class','squares-preloader')
     loader.setAttribute('style','margin-top:20vh;margin-bottom:20vh;')
     output.appendChild(loader)
-    
+    console.log(search.value)
     e.preventDefault()
     getMember(search.value)
 } )
