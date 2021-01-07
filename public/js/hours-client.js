@@ -44,9 +44,9 @@ const getMember = (member) =>{
             
              let hours 
              if(parseInt(value) >1){
-                 hours = `${key}: ${value} hours`
+                 hours = `${value} hours`
              }else{
-                hours = `${key}: ${value} hour`
+                hours = `${value} hour`
              }
              professional.appendChild(createEventCard(key,hours))
          }
@@ -60,9 +60,9 @@ const getMember = (member) =>{
             
              let hours 
              if(parseInt(value) >1){
-                 hours = `${key}: ${value} hours`
+                 hours = `${value} hours`
              }else{
-                hours = `${key}: ${value} hour`
+                hours = `${value} hour`
              }
              service.appendChild(createEventCard(key,hours))
          }
