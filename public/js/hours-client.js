@@ -21,6 +21,8 @@ const getMember = (member) =>{
     }).then(({studentId,fullName,memberTitle,totalProfessionalHours,totalServiceHours,certificateLink,Professional,Service})=>{
         console.log(totalServiceHours)
         output.textContent=''
+        professional.textContent=''
+        service.textContent=''
 
 
         const row= document.createElement('div')
