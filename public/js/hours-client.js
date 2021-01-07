@@ -86,10 +86,14 @@ const getMember = (member) =>{
 
 form.addEventListener('submit',(e)=>{
     output.textContent=''
+    professional.textContent=''
+    service.textContent=''
     const loader = document.createElement('div')
     loader.setAttribute('class','squares-preloader')
     loader.setAttribute('style','margin-top:20vh;margin-bottom:20vh;')
     output.appendChild(loader)
+    professional.appendChild(loader)
+    service.appendChild(loader)
     console.log(search.value)
     e.preventDefault()
     getMember(search.value)
