@@ -35,7 +35,7 @@ let dateYear = now.year()
 
 //Form Button
 const button_one = 'Add Non-BAP Hours'
-const button_one_link = 'http://google.com'
+const button_one_link = 'https://linktr.ee/bapmonash'
 
 //titleOfApp
 const siteTitle = 'Xi Epsilon Portal'
