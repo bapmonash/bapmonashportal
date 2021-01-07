@@ -3,7 +3,8 @@
 const form = document.querySelector('#location-form')
 const search = document.querySelector('input')
 const output = document.querySelector('#output')
-
+const professional = document.querySelector('#professional')
+const service = document.querySelector('#service')
 
 const getMember = (member) =>{
     url = `/hours?studentId=${member}`
@@ -21,66 +22,53 @@ const getMember = (member) =>{
         console.log(totalServiceHours)
         output.textContent=''
 
-        const membership= document.createElement('p')
-        membership.textContent = `${memberTitle}`
 
-        const id = document.createElement('p')
-        id.textContent = `student id: ${studentId}`
+        const row= document.createElement('div')
+        row.setAttribute('id','hours-container')
+        row.setAttribute('class','row')
 
-        const name= document.createElement('p')
-        name.textContent = `${fullName} `
-
-
-        const professionalHours= document.createElement('p')
-        professionalHours.textContent = `Professional Hours: ${totalProfessionalHours}`
-
-        const serviceHours= document.createElement('p')
-        serviceHours.textContent = `Service Hours: ${totalServiceHours}`
+        row.appendChild(createDashboardCard(fullName,`${studentId}/${memberTitle}`,certificateLink,"Full Member Certificate",'red'))
         
-        output.appendChild(name)
-        output.appendChild(id)
+        row.appendChild(createDashboardCard('Professional Hours',totalProfessionalHours,'/events',"See Events",'dark'))
+        
+        row.appendChild(createDashboardCard('Service Hours',totalServiceHours,'/events',"See Events",'dark'))
+        
 
-        output.appendChild(membership)
-        if(certificateLink){
-            const credential= document.createElement('a')
-            credential.href = certificateLink
-            credential.textContent="full member certificate\n"
-            output.appendChild(credential)
-        }
+        professional.appendChild(createTitleHoursCard('Professional Events'))
+
+         // Professional List
+         const professionalMap = new Map(Object.entries(Professional))
+         for (const[key,value] of professionalMap.entries()){
             
-        // Professional List
-        output.appendChild(professionalHours)
-        const professionalList= document.createElement('ul')
-        const professionalMap = new Map(Object.entries(Professional))
-        for (const[key,value] of professionalMap.entries()){
-            const professionalEvent = document.createElement('li')
-            if(parseInt(value) >1){
-                professionalEvent.textContent = `${key}: ${value} hours`
-            }else{
-                professionalEvent.textContent = `${key}: ${value} hour`
-            }
-            professionalList.appendChild(professionalEvent)
-        }
-        output.appendChild(professionalList)
+             let hours 
+             if(parseInt(value) >1){
+                 hours = `${key}: ${value} hours`
+             }else{
+                hours = `${key}: ${value} hour`
+             }
+             professional.appendChild(createEventCard(key,hours))
+         }
 
-
+        service.appendChild(createTitleHoursCard('Service Events'))
 
         // Service List
-        output.appendChild(serviceHours)
-        const serviceList= document.createElement('ul')
+
         const serviceMap = new Map(Object.entries(Service))
-        for (const[key,value] of serviceMap.entries()){
-            const serviceEvent = document.createElement('li')
-            if(parseInt(value) >1){
-                serviceEvent.textContent = `${key}: ${value} hours`
-            }else{
-                serviceEvent.textContent = `${key}: ${value} hour`
-            }
-            serviceList.appendChild(serviceEvent)
-        }
-        output.appendChild(serviceList)
+         for (const[key,value] of serviceMap.entries()){
+            
+             let hours 
+             if(parseInt(value) >1){
+                 hours = `${key}: ${value} hours`
+             }else{
+                hours = `${key}: ${value} hour`
+             }
+             service.appendChild(createEventCard(key,hours))
+         }
 
 
+        output.appendChild(row)
+
+        
 
        
     }).catch((error)=>{
@@ -104,3 +92,98 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     getMember(search.value)
 } )
+
+
+
+const createDashboardCard = (title,body,link, linkText, color) =>{
+    const card= document.createElement('div')
+    card.setAttribute('class','full-card cards col-sm-4')
+
+    const shadow= document.createElement('div')
+    shadow.setAttribute('class','card text-white shadow')
+
+    const cardBody= document.createElement('div')
+    cardBody.setAttribute('class',`card-body dashboard-card-${color}`)
+
+
+    const titleText= document.createElement('h3')
+    titleText.setAttribute('class',`card-title`)
+    titleText.textContent = title
+
+
+    const bodyText= document.createElement('p')
+    bodyText.textContent = body
+
+    const button = document.createElement('button')
+    button.setAttribute('class','btn btn-light')
+    button.setAttribute('onclick',`location.href="${link}"`)
+    button.textContent = linkText
+
+    cardBody.appendChild(titleText)
+    cardBody.appendChild(bodyText)
+    console.log(link)
+    if(link){
+        cardBody.appendChild(button)
+    }
+    shadow.appendChild(cardBody)
+
+    card.appendChild(shadow)
+
+    return card
+
+}
+
+
+const createTitleHoursCard = (name) =>{
+    const fullCard = document.createElement('div')
+    fullCard.setAttribute('class','full-card cards col-sm-16')
+
+    const shadow= document.createElement('div')
+    shadow.setAttribute('class','card text-white shadow')
+
+    const cardBody= document.createElement('div')
+    cardBody.setAttribute('class',`card-body dashboard-card-alert-title-red`)
+
+    const nameText= document.createElement('h3')
+    nameText.textContent = name
+
+    cardBody.appendChild(nameText)
+
+    shadow.appendChild(cardBody)
+
+    fullCard.appendChild(shadow)
+
+    return fullCard
+
+}
+
+
+const createEventCard = (name, hours) =>{
+    const fullCard = document.createElement('div')
+    fullCard.setAttribute('class','full-card cards col-sm-16')
+
+    const shadow= document.createElement('div')
+    shadow.setAttribute('class','card shadow')
+
+    const cardBody= document.createElement('div')
+    cardBody.setAttribute('class',`card-body dashboard-card-alert-title-light`)
+
+    const nameText= document.createElement('h6')
+    nameText.textContent = `${name}     `
+
+    const hoursText= document.createElement('span')
+    hoursText.setAttribute('class','badge badge-secondary')
+    hoursText.textContent = hours
+
+    nameText.appendChild(hoursText)
+
+    cardBody.appendChild(nameText)
+
+    shadow.appendChild(cardBody)
+
+    fullCard.appendChild(shadow)
+
+    return fullCard
+
+}
+

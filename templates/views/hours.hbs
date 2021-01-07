@@ -12,22 +12,22 @@
 <body>
     {{>header}}
     <main>
-        <h1>{{title}}</h1>
-        <button type="button" id="call-to-action" class="btn btn-dark" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
+        <div style="margin-top: ;text-align: center;">
+            <h1>{{title}}</h1>
+            <button type="button" id="call-to-action" class="btn btn-dark" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
+        </div>
         <br></br>
         <form id="location-form">
             <div class="input-group mb-3">
-                <input value="" class="form-control" placeholder="Enter student id to find hours...">
+                <input value="" class="form-control" placeholder="Enter Student ID to check your hours...">
                 <div class="input-group-append">
                     <button type="submit" class="btn btn-outline-secondary">Search</button>
                 </div>
             </div>
         </form>
         <div id="output"></div>
-
-
-
-        
+        <div id="professional"></div>
+        <div id="service"></div>
     </main>
     {{>footer}}
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>

@@ -1,6 +1,6 @@
 const upcoming_panel = document.querySelector('#upcoming-event')
 
-const hero_container = document.querySelector('#hero-container')
+const hero_container = document.querySelector('#index-container')
 
 
 const makePreloader = () =>{
