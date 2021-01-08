@@ -97,7 +97,6 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
         image = '../assets/red.png'
     }
     imageContainer.setAttribute('src',image)
-    imageContainer.setAttribute('height',"200px")
 
 
 
