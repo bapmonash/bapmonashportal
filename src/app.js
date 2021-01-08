@@ -52,13 +52,13 @@ app.get('', (req,res)=>{
     })
   
         getEventDetails(now,(error, {
-            eventNo,date,time,type,name,place,about,image,link
+            eventNo,date,time,type,name,place,about,image,link, linkText
         }={})=>{
             if(error){
                 return res.send(error)
             }else{
                 return res.send({
-                    eventNo,date,time,type,name,place,about,image,link
+                    eventNo,date,time,type,name,place,about,image,link, linkText
                 })
             }
         })
@@ -86,13 +86,13 @@ app.get('/events', (req,res)=>{
     
     }else if(req.query.event=='upcoming'){
         getEventDetails(req.query.event,(error, {
-            eventNo,date,time,type,name,place,about,image,link
+            eventNo,date,time,type,name,place,about,image,link, linkText
         }={})=>{
             if(error){
                 return res.send(error)
             }else{
                 return res.send({
-                    eventNo,date,time,type,name,place,about,image,link
+                    eventNo,date,time,type,name,place,about,image,link,linkText
                 })
             }
         })

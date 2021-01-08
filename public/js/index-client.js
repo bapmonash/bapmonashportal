@@ -24,9 +24,10 @@ const loadEvent = () =>{
        
         upcoming_panel.textContent=''
         console.log(data)
+        console.log(data.linkText)
         hero_container.appendChild(createEvent(data.date,data.time,
             data.type,data.name,
-            data.place,data.about,data.image,data.link))
+            data.place,data.about,data.image,data.link,data.linkText))
        
     }).catch((error)=>{
     
@@ -36,12 +37,13 @@ const loadEvent = () =>{
 }
 
 
-const createEvent = (date,time,type,name,place,about,image,link) => {
+
+const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
     const cards = document.createElement('div')
     cards.setAttribute('class','cards col-sm-6')
 
-    if(!date || !time || !name || !place){
+    if(!date || !time || !name || !place ){
         return cards
     }
     
@@ -102,7 +104,13 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
     const registerContainer = document.createElement('button')
     registerContainer.setAttribute('class','btn btn-dark btn-block"')
     registerContainer.setAttribute('onclick',`location.href="${link}"`)
-    registerContainer.textContent = 'Register Here'
+    if(linkText){
+        registerContainer.textContent = linkText
+    }else{
+        registerContainer.textContent = 'Register Here'
+    }
+    
+    
 
 
     crop.appendChild(imageContainer)

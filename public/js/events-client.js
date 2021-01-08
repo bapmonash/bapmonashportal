@@ -28,12 +28,13 @@ const loadEvents = () =>{
         
 
         data.data.forEach(event => {
-      
+            console.log(event.linkText)
             events_panel.appendChild(createEvent(
                 event.date,event.time,
                 event.type,event.name,
                 event.place,event.about,
-                event.image,event.link))
+                event.image,event.link,
+                event.linkText))
             
         })
        
@@ -45,9 +46,7 @@ const loadEvents = () =>{
 }
 
 
-
-
-const createEvent = (date,time,type,name,place,about,image,link) => {
+const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
     const cards = document.createElement('div')
     cards.setAttribute('class','cards col-sm-6')
@@ -113,7 +112,13 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
     const registerContainer = document.createElement('button')
     registerContainer.setAttribute('class','btn btn-dark btn-block"')
     registerContainer.setAttribute('onclick',`location.href="${link}"`)
-    registerContainer.textContent = 'Register Here'
+    if(linkText){
+        registerContainer.textContent = linkText
+    }else{
+        registerContainer.textContent = 'Register Here'
+    }
+    
+    
 
 
     crop.appendChild(imageContainer)
@@ -134,6 +139,7 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
     cards.appendChild(cardShadow)
     return cards
 }
+
 
 
 String.prototype.toProperCase = function () {
