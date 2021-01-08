@@ -149,7 +149,7 @@ body{
 	width: 100%;
 }
 .crop {
-	height: 250px;
+	height: auto;
 	width: 100%;
 	overflow: hidden;
 }
