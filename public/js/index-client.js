@@ -41,6 +41,11 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
     const cards = document.createElement('div')
     cards.setAttribute('class','cards col-sm-6')
 
+    if(!date || !time || !name || !place){
+        return cards
+    }
+    
+
 
     const cardShadow = document.createElement('div')
     cardShadow.setAttribute('class','card shadow')
@@ -50,10 +55,6 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
 
     const cardBody = document.createElement('div')
     cardBody.setAttribute('class','card-body')
-
-    const UpcomingContainer = document.createElement('h4')
-    UpcomingContainer.setAttribute('class','card-title')
-    UpcomingContainer.textContent = 'Upcoming Event'
 
 
 
@@ -81,7 +82,12 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
 
 
     const aboutContainer = document.createElement('p')
-    aboutContainer.textContent = `${about.slice(0,60)}...`
+    if(about){
+        aboutContainer.textContent = `${about.slice(0,60)}...`
+    }else{
+        aboutContainer.textContent = ``
+    }
+    
 
     
     const imageContainer= document.createElement('img')
@@ -92,25 +98,24 @@ const createEvent = (date,time,type,name,place,about,image,link) => {
     imageContainer.setAttribute('height',"200px")
 
 
+
     const registerContainer = document.createElement('button')
     registerContainer.setAttribute('class','btn btn-dark btn-block"')
-
     registerContainer.setAttribute('onclick',`location.href="${link}"`)
     registerContainer.textContent = 'Register Here'
 
 
     crop.appendChild(imageContainer)
-
-    cardBody.appendChild(UpcomingContainer)
     cardBody.appendChild(nameContainer)
     cardBody.appendChild(typeContainer)
     cardBody.appendChild(dateContainer)
     cardBody.appendChild(placeContainer)
     cardBody.appendChild(aboutContainer)
-    cardBody.appendChild(registerContainer)
-        
 
-
+    if(link){
+        cardBody.appendChild(registerContainer)
+    }
+    
     cardShadow.appendChild(crop)
     cardShadow.appendChild(cardBody)
 
