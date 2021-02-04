@@ -131,6 +131,16 @@ app.get('/hours', (req,res)=>{
     }
 })
 
+
+// about 
+
+app.get('/about', (req,res)=>{
+    res.render('about',{
+            siteTitle:siteTitle,
+            title:'About',
+            dateYear
+    })
+})
 //404
 app.get('*', (req,res)=>{
     res.render('404',{
