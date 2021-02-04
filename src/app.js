@@ -137,7 +137,7 @@ app.get('/hours', (req,res)=>{
 app.get('/about', (req,res)=>{
     res.render('about',{
             siteTitle:siteTitle,
-            title:'About',
+            title:'How It Works',
             dateYear
     })
 })
