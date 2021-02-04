@@ -58,7 +58,10 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
     const cardBody = document.createElement('div')
     cardBody.setAttribute('class','card-body')
 
-
+    const upcomingContainer = document.createElement('h5')
+    upcomingContainer.setAttribute('class','card-title text-muted')
+    upcomingContainer.setAttribute('style','text-decoration:underline;')
+    upcomingContainer.textContent = "Upcoming Event"
 
     const nameContainer = document.createElement('h5')
     nameContainer.setAttribute('class','card-title text-muted')
@@ -113,6 +116,7 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
 
     crop.appendChild(imageContainer)
+    cardBody.appendChild(upcomingContainer)
     cardBody.appendChild(nameContainer)
     cardBody.appendChild(typeContainer)
     cardBody.appendChild(dateContainer)

@@ -28,13 +28,11 @@ const loadEvents = () =>{
         
         const events = data.data
    
-        const sortedEvents = events.sort((a, b)=> {
-
-            return moment(b.date, 'DD/MM/YYYY').toDate().getTime()-moment(a.date, 'DD/MM/YYYY').toDate().getTime()
-        })
+        const sortedEvents = events.sort((a, b)=>  moment(b.date, 'DD/MM/YYYY').toDate().getTime()-moment(a.date, 'DD/MM/YYYY').toDate().getTime())
         console.log(sortedEvents)
         
         sortedEvents.forEach(event => {
+            
             if(event.date && event.time && event.name && event.place){
                 events_panel.appendChild(createEvent(
                     event.date,event.time,
