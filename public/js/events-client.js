@@ -24,11 +24,18 @@ const loadEvents = () =>{
         }
     }).then((data)=>{
         events_panel.textContent=''
-        console.log(data.data)
         
+        
+        const events = data.data
+   
+        const sortedEvents = events.sort((a, b)=> {
 
-        data.data.forEach(event => {
-            console.log(event.linkText)
+            return moment(b.date, 'DD/MM/YYYY').toDate().getTime()-moment(a.date, 'DD/MM/YYYY').toDate().getTime()
+        })
+        console.log(sortedEvents)
+        
+        sortedEvents.forEach(event => {
+        
             events_panel.appendChild(createEvent(
                 event.date,event.time,
                 event.type,event.name,
