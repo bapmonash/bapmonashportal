@@ -35,13 +35,15 @@ const loadEvents = () =>{
         console.log(sortedEvents)
         
         sortedEvents.forEach(event => {
-        
-            events_panel.appendChild(createEvent(
-                event.date,event.time,
-                event.type,event.name,
-                event.place,event.about,
-                event.image,event.link,
-                event.linkText))
+            if(event.date && event.time && event.name && event.place){
+                events_panel.appendChild(createEvent(
+                    event.date,event.time,
+                    event.type,event.name,
+                    event.place,event.about,
+                    event.image,event.link,
+                    event.linkText))
+            }
+            
             
         })
        
