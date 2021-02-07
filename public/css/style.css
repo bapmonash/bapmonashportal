@@ -1,5 +1,5 @@
 main{
-	padding:40px 6%  25px 6% ;
+	padding:30px 6%  25px 6% ;
 	min-height: 100vh; 
     
 }
@@ -311,6 +311,7 @@ h1{
 
 
   .hero-title{
+	margin-top:5%;
 	letter-spacing: -3px;
 	font-size: 7vh;
   }
@@ -396,3 +397,18 @@ h1{
 	letter-spacing: -.5px;
 	font-weight: 200;
   }
+
+
+  /*  about img*/
+  .about-crop {
+	height: auto;
+	padding-top:10%;
+	flex-direction: row;
+	overflow: hidden;
+}
+  .about-img{
+	justify-content: center;
+	width: 150px;
+  }
+
+\
