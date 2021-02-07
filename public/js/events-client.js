@@ -76,8 +76,8 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
 
     const nameContainer = document.createElement('h5')
-    nameContainer.setAttribute('class','card-title text-muted')
-    nameContainer.setAttribute('style','text-decoration:underline;')
+    nameContainer.setAttribute('class','card-title')
+
     nameContainer.textContent = name
 
 
@@ -100,7 +100,7 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
     const aboutContainer = document.createElement('p')
     if(about){
-        aboutContainer.textContent = `${about.slice(0,60)}...`
+        aboutContainer.textContent = `${about.slice(0,120)}...`
     }else{
         aboutContainer.textContent = ``
     }

@@ -1,6 +1,6 @@
 main{
-	padding:15px 5%  25px 5% ;
-	height:auto;
+	padding:40px 6%  25px 6% ;
+	min-height: 100vh; 
     
 }
 
@@ -16,11 +16,15 @@ body{
 
 }
 
+h1{
+	font-size:7vh;
+}
 
 /* footer */
 .footer .container {
     background-color: #6d0000;
-    padding-top:15;
+	padding-top:15;
+	height:10vh;
     padding-bottom:15;
 }
 .footer {
@@ -34,6 +38,10 @@ body{
 #header-red{
 	width: 100%;
 	background-color: #6d0000 !important;
+	-webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+	-moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+	box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+	
 }
 
 .navbar-toggler {
@@ -283,3 +291,108 @@ body{
 		transform: scale(1);
 	}
 }
+
+
+.btn:focus {
+	outline: none;
+	box-shadow: none;
+  }
+
+
+  /* breadcrumbs */
+
+  .breadtrail{
+	  color:black;
+  }
+
+  .breadtrail:hover{
+	  color:black;
+  }
+
+
+  .hero-title{
+	letter-spacing: -3px;
+	font-size: 7vh;
+  }
+
+  .nav-item{
+	letter-spacing: -1px;
+	font-weight: 200;
+  }
+
+
+  /* new buttons */
+  .btn {
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	border-radius: 35px;
+
+
+	font-size: 16px;
+	font-weight:500;
+
+	cursor: pointer;
+  }
+  
+
+
+  /* Green */
+  .success {
+	border-color: #4CAF50;
+	color: green;
+  }
+  
+  .success:hover {
+	background-color: #4CAF50;
+	color: white;
+  }
+  
+  /* Blue */
+  .info {
+	border-color: #2196F3;
+	color: dodgerblue;
+  }
+  
+  .info:hover {
+	background: #2196F3;
+	color: white;
+  }
+  
+  /* Orange */
+  .warning {
+	border-color: #ff9800;
+	color: orange;
+  }
+  
+  .warning:hover {
+	background: #ff9800;
+	color: white;
+  }
+  
+  /* Red */
+  .danger {
+	border-color: #f44336;
+	color: red;
+	
+  }
+  
+  .danger:hover {
+	background: #f44336;
+	color: white;
+  }
+  
+  /* Gray */
+  .default {
+	border-color: #e7e7e7;
+	color: black;
+  }
+
+ 
+
+  /* card title */
+
+  .card-title{
+	letter-spacing: -.5px;
+	font-weight: 200;
+  }

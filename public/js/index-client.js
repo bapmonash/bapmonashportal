@@ -59,13 +59,13 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
     cardBody.setAttribute('class','card-body')
 
     const upcomingContainer = document.createElement('h5')
-    upcomingContainer.setAttribute('class','card-title text-muted')
+    upcomingContainer.setAttribute('class','card-title')
     upcomingContainer.setAttribute('style','text-decoration:underline;')
     upcomingContainer.textContent = "Upcoming Event"
 
     const nameContainer = document.createElement('h5')
     nameContainer.setAttribute('class','card-title text-muted')
-    nameContainer.setAttribute('style','text-decoration:underline;')
+
     nameContainer.textContent = name
 
 
@@ -88,7 +88,7 @@ const createEvent = (date,time,type,name,place,about,image,link,linkText) => {
 
     const aboutContainer = document.createElement('p')
     if(about){
-        aboutContainer.textContent = `${about.slice(0,60)}...`
+        aboutContainer.textContent = `${about.slice(0,120)}...`
     }else{
         aboutContainer.textContent = ``
     }

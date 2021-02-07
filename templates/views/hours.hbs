@@ -12,10 +12,11 @@
 <body>
     {{>header}}
     <main>
-        <div style="margin-top: ;text-align: center;">
-            <h1>{{title}}</h1>
-            <button type="button" id="call-to-action" class="btn btn-dark" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
-        </div>
+        
+        {{>hero}}
+
+        <button type="button" id="call-to-action" class="btn btn-dark" onclick="location.href='{{buttonLink}}'">{{buttonName}}</button>
+     
         <br></br>
         <form id="location-form">
             <div class="input-group mb-3">
